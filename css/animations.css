@@ -1,0 +1,54 @@
+:root {
+  --animation-timing: 1.5s;
+  --animation-function: ease-in;
+  --animation-fill-mode: forwards;
+
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: translateX(-4px) translateY(6px) scale(.99);
+  }
+
+ 100% {
+    transform: rotate(5deg);
+  }
+}
+
+
+@keyframes slightFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: .3;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+.kf-slight-fade-in {
+    animation: var(--animation-timing) var(--animation-function) var(--animation-fill-mode) slightFadeIn;
+}
+
+.kf-fade-in {
+    animation: var(--animation-timing) var(--animation-function) var(--animation-fill-mode) fadeIn;
+}
+
+.kf-wave {
+    animation: 10s linear infinite alternate wave;
+}
