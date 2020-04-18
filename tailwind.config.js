@@ -1,4 +1,6 @@
-const headerHeight = "5rem";
+const headerHeight = "9rem";
+const desktopHeaderHeight = "13rem";
+
 
 const pale = "#f0f0ee";
 const clay = "#bb764b";
@@ -22,7 +24,7 @@ module.exports = {
       accent4: mole,
       accent5: sand,
       transparent: "transparent",
-      gray: cloud
+      gray: cloud,
     },
     fontFamily: {
       title: ["Gotu", "Helvetica", "san serif"],
@@ -37,7 +39,7 @@ module.exports = {
         headerHeight: headerHeight,
       },
       maxHeight: {
-        lg: "40rem",
+        half: "50vh",
       },
       opacity: {
         "80": ".8",
@@ -46,6 +48,7 @@ module.exports = {
       spacing: {
         "almost-full": "90vh",
         header: headerHeight,
+        "desktop-header": desktopHeaderHeight,
       },
       transitionProperty: {
         height: "height",
@@ -55,10 +58,10 @@ module.exports = {
     },
   },
   variants: {
-    height: ["group-hover", "hover"],
+    height: ["group-hover", "hover", "responsive"],
     margin: ["first"],
     opacity: ["group-hover"],
     padding: ["first", "last", "responsive"],
-    borderStyle: ["last", "responsive"]
+    borderStyle: ["last", "responsive"],
   },
 };

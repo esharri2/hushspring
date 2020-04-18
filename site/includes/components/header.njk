@@ -1,9 +1,10 @@
-<header class="z-20 w-full shadow relative h-header flex items-center lg:px-4 lg:justify-between">     
+<header class="z-20 shadow w-full relative h-header flex items-center lg:bg-accent2 lg:h-desktop-header lg:shadow-none lg:px-4 lg:flex-col lg:pt-5">     
   {# Nav is sr-only; sr users to not need this toggle button #}
-  <button class="mx-4 text-dark fill-current w-8 h-8 js-nav-toggle lg:hidden" aria-hidden="true">
+  <button class="mx-4 text-accent1 fill-current w-8 h-8 js-nav-toggle lg:hidden" aria-hidden="true">
     <span class="js-open-icon inline">{{ "/site/media/icons/menu.svg"| svgContents | safe }}</span>
     <span class="js-close-icon hidden">{{ "/site/media/icons/cross.svg"| svgContents | safe }}</span>
   </button>
-  <a class="font-title text-2xl uppercase" href="/">{{general.site_title}}</a>  
+  <a class="font-title text-3xl uppercase lg:text-5xl" href="/">{{general.site_title}}</a>  
   {% include "./nav.njk" %}
+    <img class="w-40 hidden lg:block" srcset='{% srcset "/media/cat.png" %}' src="{% src '/media/cat.png' %}"/>
 </header>

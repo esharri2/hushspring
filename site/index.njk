@@ -8,7 +8,10 @@ ctas:
 ---
 
 {# Splash screen #}
-<div class="pt-20 h-screen">
+<div class="flex justify-end">
+  {% include './includes/components/nav-simple.njk'%}
+</div>
+<div class="h-screen pt-24">
   <h1 class="font-title text-5xl uppercase sm:text-7xl md:text-8xl">{{general.site_title}}</h1>
   <div>
     <p class="font-title text-2xl pt-3 sm:text-3xl">
@@ -16,13 +19,12 @@ ctas:
     <span class="text-accent1">websites</span> 
     <span class="block">for <span class="text-accent2">writers</span> & <span class="text-gray">artists</span></span>
   </div>
-  <img class="pt-4" srcset='{% srcset "media/applequince.jpg" %}'/>
+  <img class="pt-4 max-h-half" srcset='{% srcset "media/applequince.jpg" %}'/>
 </div>
 {# Service list #}
-<div class="cmp-full-bleed bg-accent2 py-20">
+<div class="cmp-full-bleed bg-accent2 py-24">
     <div class="mx-auto max-w-screen-md px-6">
     <h2 class="font-title text-4xl sm:text-5xl">We'd like to make you a website.</h2>
-    {# <p class="font-title text-3xl pt-20 pb-6">Here's what we can offer:</p> #}
     <ul class="pt-20 font-title text-3xl grid gap-16 grid-cols-1 sm:grid-cols-2">
       <div class="flex items-center justify-center">
         <img alt="" class="h-48 kf-wave" src="media/coleus-rotate.png" srcset='{% srcset "media/coleus-rotate.png" %}'/>
@@ -36,7 +38,7 @@ ctas:
       </div>
       {# start in first col, 2nd row #}
       <li class="cmp-home-card sm:col-start-1 sm:row-start-2">
-        <h3 class="pb-4">Easy to use content management tools</h3>
+        <h3 class="pb-4">Simple content management tools</h3>
         <p class="font-body text-base md:text-lg">You control your site's content. Instantly update it whenever you want.</p>
       </li>
       <div class="flex items-center justify-center">
@@ -58,7 +60,7 @@ ctas:
 </div>
 
 {# CTAs #}
-<div class="cmp-full-bleed bg-accent1 py-20">
+<div class="cmp-full-bleed bg-accent1 py-24">
     <div class="mx-auto max-w-screen-lg px-6 md:grid md:grid-cols-2 md:grid-rows-1 md:gap-4">
       {% for cta in ctas%}
           <a class="flex justify-between fill-current items-center font-title text-2xl p-8 border border-dark block mb-4 hover:border-accent5 hover:text-accent5" href="{{cta.link}}">{{cta.text}} <span class="w-8 h-8">{{ "/site/media/icons/chevron-right.svg" | svgContents | safe }}</span></a>
@@ -67,9 +69,9 @@ ctas:
 </div>
 
 {# Contact form #}
-<div class="cmp-full-bleed bg-accent5 py-20">
+<div class="cmp-full-bleed bg-accent5 py-24">
     <div class="mx-auto max-w-screen-lg px-6">
-    <h2 class="font-title text-4xl sm:text-5xl text-center">Get in touch!</h2>
+    <h2 class="font-title text-4xl sm:text-5xl text-center">Get in touch with Hush Spring!</h2>
       {% include './includes/components/contact-form.njk' %}  
     </div>
 </div>

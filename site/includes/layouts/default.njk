@@ -19,15 +19,13 @@
     </head>
 
     <body class="text-dark h-full overflow-x-hidden">
+        {% include "components/skip-to-content.njk" %} 
         {% if page.fileSlug !== '' %}
-            {% include "components/skip-to-content.njk" %} 
             {% include "components/header.njk" %} 
         {% endif %}        
         <main id="main" class="mx-auto px-6 min-h-full max-w-screen-lg">{{ content | safe }}</main>
         {% include "components/back-to-top.njk" %} 
-        {% if page.fileSlug !== '' %}
-            {% include "components/footer.njk" %} 
-        {% endif %}
+        {% include "components/footer.njk" %} 
     </body>
 
 

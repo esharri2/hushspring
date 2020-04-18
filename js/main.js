@@ -5,3 +5,6 @@ import "../css/main.css";
 import "./backToTop.js";
 import "./header.js";
 import "./clickToCopy.js";
+import "./contact.js"
+
+//dynamic import contact page?

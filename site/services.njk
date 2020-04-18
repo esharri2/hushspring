@@ -2,20 +2,61 @@
 layout: container
 eleventyNavigation:
   key: Services
-  order: 6
+  order: 1
+services:
+  - title: Author Site
+    price: $470
+    description: A website for writers, authors, poets, novelists.
+    points:
+      - Common features like a blog, an events calendar, pages for your books and publications, and more. Pick and choose what you need now and what you might need in the future.
+      - Custom, collaborative design
+      - A content management tool for easily updating your content whenever you want
+      - Top-notch performance, accessibility, and SEO
+      - Hosting
+  - title: Artist Site
+    price: $670
+    description: A website for painters and other visual artists.
+    points:
+      - Common features like an image gallery, contact form, and more. Pick and choose what you need now and what you might need in the future. 
+      - Custom, collaborative design
+      - A content management tool for easily updating your content whenever you want
+      - Top-notch performance, accessibility, and SEO
+      - Hosting
+questions:
+  - question: Once you build my site, can I update it?
+    answer: Yes! You will have a content management tool that allows you to update the content on your site. You could do things like create a new page for your new book, upload a new painting, or edit your bio. After it's built, you won't be able modify the design of your site (font, color, layout) without help from us, or another a web developer.
+  - question: What if I wanted to use a different service to host my website once it's built?
+    answer: We'll give you all the code for your site, so you could do whatever you want with it. 
+  - question: Can't I just use Squarespace, Wix, or a similar service?
+    answer: Yes! These services are cool because you can modify the layouts and design by yourself without knowing how to write code. But, this work can still take a lot of time and effort. And, unfortunately, you will be paying a monthly fee for as long as your site is around, and you may have to use templates or "stock" features that aren't exactly what you want. In most cases, your Hush Spring site will be more peformant, accessible, and SEO friendly than a site built with these other tools. 
+  - question: You say that my site will be fast, accessible, and SEO friendly. How will I know that it actually is?
+    answer: We can show you how to use a tool called Lighthouse, from Google. It will you show you scores for web performance, accessibility, and SEO. They will be very high.
 ---
 
-<h1 class="cmp-h1">{{ titles.services if titles.services else "Services" }}</h1>
+<h1 class="cmp-h1">Services</h1>
+<p class="cmp-p">Hush Spring builds websites for writers and artists.</p>
+<p class="cmp-p">Prices include design, development, and hosting of your site. You will also need to buy a domain name, which usually costs $12-15 a year.</p>
+<p> If you don't see a service listed below that fits your needs, <a class="text-underline text-accent1"href="/contact">get in touch</a> and let us know what you have in mind.</p>
+{% for service in services %}
+  <section class="pt-4">
+    <h2 class="cmp-h2">{{service.title}} | <span>{{service.price}}</span> | <a class="text-accent1" href="/contact?purchase=Author Site">Buy</a></h2>
+    <p>{{service.description}}</p>
+    <ul class="list-disc">
+      <p class="pt-4">Includes:</p>
+      {% for point in service.points %}
+        <li class="ml-8 max-w-2xl">{{point}}</li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endfor %}
 
-<div>
-    {% for service in collections.service %}
-    <section class="pt-12 first:pt-0">
-        <h2 class="cmp-h2">{{service.data.title}}</h2>
-        <div class="cmp-markdown">
-            {{ service.templateContent | safe }}
-        </div>
-        <a class="cmp-link-button" href="/contact">Contact</a>
-    </section>
-    {% endfor %}
+<h2 id="faq" class="cmp-h2 pt-20">Frequently Asked Questions</h2>
+{% for question in questions %}
+<div class="py-4">
+  <p class="text-lg">Q: {{question.question}}</p>
+  <p class="max-w-3xl pt-4">A: {{question.answer}}</p>
 </div>
+{% endfor %}
+
+
 
