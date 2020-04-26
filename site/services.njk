@@ -9,7 +9,7 @@ services:
     description: A website for writers, authors, poets, novelists.
     points:
       - Common features like a blog, an events calendar, pages for your books and publications, and more. Pick and choose what you need now and what you might need in the future.
-      - Custom, collaborative design
+      - A custom design — fonts, colors, layout — just for you
       - A content management tool for easily updating your content whenever you want
       - Top-notch performance, accessibility, and SEO
       - Hosting
@@ -31,15 +31,20 @@ questions:
     answer: Yes! These services are cool because you can modify the layouts and design by yourself without knowing how to write code. But, this work can still take a lot of time and effort. And, unfortunately, you will be paying a monthly fee for as long as your site is around, and you may have to use templates or "stock" features that aren't exactly what you want. In most cases, your Hush Spring site will be more peformant, accessible, and SEO friendly than a site built with these other tools. 
   - question: You say that my site will be fast, accessible, and SEO friendly. How will I know that it actually is?
     answer: We can show you how to use a tool called Lighthouse, from Google. It will you show you scores for web performance, accessibility, and SEO. They will be very high.
+  - question: Once my site is built, what if I want to change the design or add a new feature?
+    answer: You will have a lot of control over your site content, and you can update it whenever you want. Your site will also come with features that you might not want now, but can turn on later. That said, if you want a design tweak, a full redesign, or some brand new feature, get in touch, and we we'll provide an affordable quote. 
+  - question: You are just charging me a one time fee. Does that mean my site is free forever after that?
+    answer: Most likely. We build sites using tools and techniques that allow us to use free or extremely cheap tools for hosting. You will be locked in at no additional cost for two years. After two years, unless there has been a significant rise in the cost of the tools we use, there will continue to be no additional cost.
+
 ---
 
 <h1 class="cmp-h1">Services</h1>
 <p class="cmp-p">Hush Spring builds websites for writers and artists.</p>
 <p class="cmp-p">Prices include design, development, and hosting of your site. You will also need to buy a domain name, which usually costs $12-15 a year.</p>
-<p> If you don't see a service listed below that fits your needs, <a class="text-underline text-accent1"href="/contact">get in touch</a> and let us know what you have in mind.</p>
+<p> If you don't see a service listed below that fits your needs, <a class="text-underline text-accent1" href="/contact">get in touch</a> and let us know what you have in mind.</p>
 {% for service in services %}
-  <section class="pt-4">
-    <h2 class="cmp-h2">{{service.title}} | <span>{{service.price}}</span> | <a class="text-accent1" href="/contact?purchase=Author Site">Buy</a></h2>
+  <section class="pt-8">
+    <h2 class="cmp-h2">{{service.title}} | <span>{{service.price}}</span> | <a class="text-accent1" href="/contact?purchase={{service.title}}">Buy</a></h2>
     <p>{{service.description}}</p>
     <ul class="list-disc">
       <p class="pt-4">Includes:</p>
@@ -53,7 +58,7 @@ questions:
 <h2 id="faq" class="cmp-h2 pt-20">Frequently Asked Questions</h2>
 {% for question in questions %}
 <div class="py-4">
-  <p class="text-lg">Q: {{question.question}}</p>
+  <p class="text-lg font-title">Q: {{question.question}}</p>
   <p class="max-w-3xl pt-4">A: {{question.answer}}</p>
 </div>
 {% endfor %}

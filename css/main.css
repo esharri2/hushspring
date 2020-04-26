@@ -48,7 +48,7 @@ button, a, input, textarea {
 }
 
 .cmp-input {
-  @apply block p-2 bg-transparent w-full border border-dark;
+  @apply block p-2 bg-transparent w-full bg-lightgray;
 }
 
 .cmp-link:hover {

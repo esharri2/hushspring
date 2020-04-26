@@ -3,8 +3,30 @@ layout: container
 eleventyNavigation:
   key: Samples
   order: 2
+samples:
+  - title: Lorem Doe
+    description: This is a demo Author Site we made just to show off some different features you might want to have on your own site.
+    url: https://loremdoe.netlify.app
+    img: /media/ldds-desktop.png
+  - title: Elizabeth Wagner
+    description: A fiction writer in Raleigh, NC
+    url: https://www.elizabeth-wagner.com
+    img: /media/ew-desktop.png
 ---
 
 <h1 class="cmp-h1">Samples</h1>
-
+{% for sample in samples %}
+  <section class="flex items-center flex-wrap lg:flex-no-wrap py-8">
+    <div class="w-full lg:w-auto">  
+      <a href="{{sample.url}}" target="_blank" rel="noreferrer noopener">
+        <img class="block lg:max-w-sm" sizes="480px" srcset='{% srcset sample.img %}' src="{% src sample.img %}"/>
+      </a>
+    </div>
+    <div class="pt-4 lg:pl-8 lg:pt-0">
+      <h2 class="cmp-h2"><a class="cmp-link" target="_blank" rel="noreferrer noopener" href="{{sample.url}}">{{sample.title}}</a></h2>
+      <p class="cmp-p">{{sample.description}}</p>
+      <a target="_blank" rel="noreferrer noopener" class="mt-4 flex justify-between fill-current items-center font-title p-4 bg-dark text-light w-40 hover:bg-accent1" href="{{sample.url}}">Check it out <span class="w-4 h-4">{{ "/site/media/icons/chevron-right.svg" | svgContents | safe }}</span></a>
+    </div>
+  </section>
+{% endfor %}
 

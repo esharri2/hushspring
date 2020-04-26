@@ -10,7 +10,8 @@ const tumeric = "#e3c090";
 const coal = "#2a2825";
 const cloud = "#848880";
 const mole = "#503a2d";
-const sand = "#cebfa8"
+const sand = "#cebfa8";
+const lightgray = "#d2d4d1";
 
 
 module.exports = {
@@ -25,6 +26,7 @@ module.exports = {
       accent5: sand,
       transparent: "transparent",
       gray: cloud,
+      lightgray: lightgray 
     },
     fontFamily: {
       title: ["Gotu", "Helvetica", "san serif"],
