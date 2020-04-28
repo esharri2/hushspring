@@ -5,11 +5,11 @@
 
   {% set activeClass %}{% if entry.url == page.url %}cmp-active-link{% endif %}{% endset %}
     <li class="{{activeClass}}">
-      <a class="cmp-link block px-2 pt-2 md:px-4 uppercase font-title text-lg md:text-xl" href="{{ entry.url | url }}">{{ entry.title }}</a>
+      <a class="cmp-link block px-2 pt-2 md:px-4 uppercase font-title text-sm sm:text-md md:text-xl" href="{{ entry.url | url }}">{{ entry.title }}</a>
     </li>
   {%- endmacro %}
 
-  <ul class="flex flex-wrap justify-center items-center flex-col sm:flex-row">
+  <ul class="flex flex-wrap justify-center items-center">
   {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
   </ul>
 </nav>
