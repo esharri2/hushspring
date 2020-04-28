@@ -11,40 +11,40 @@ services:
       - Common features like a blog, an events calendar, pages for your books and publications, and more. Pick and choose what you need now and what you might need in the future.
       - A custom design — fonts, colors, layout — just for you
       - A content management tool for easily updating your content whenever you want
-      - Top-notch performance, accessibility, and SEO
+      - Top-notch performance, accessibility, and SEO (search engine optimization)
       - Hosting
   - title: Artist Site
-    price: $670
+    price: Coming soon
     description: A website for painters and other visual artists.
     points:
       - Common features like an image gallery, contact form, and more. Pick and choose what you need now and what you might need in the future. 
-      - Custom, collaborative design
+      - A custom design — fonts, colors, layout — just for you
       - A content management tool for easily updating your content whenever you want
-      - Top-notch performance, accessibility, and SEO
+      - Top-notch performance, accessibility, and SEO (search engine optimization)
       - Hosting
 questions:
   - question: Once you build my site, can I update it?
     answer: Yes! You will have a content management tool that allows you to update the content on your site. You could do things like create a new page for your new book, upload a new painting, or edit your bio. After it's built, you won't be able modify the design of your site (font, color, layout) without help from us, or another a web developer.
-  - question: What if I wanted to use a different service to host my website once it's built?
-    answer: We'll give you all the code for your site, so you could do whatever you want with it. 
   - question: Can't I just use Squarespace, Wix, or a similar service?
-    answer: Yes! These services are cool because you can modify the layouts and design by yourself without knowing how to write code. But, this work can still take a lot of time and effort. And, unfortunately, you will be paying a monthly fee for as long as your site is around, and you may have to use templates or "stock" features that aren't exactly what you want. In most cases, your Hush Spring site will be more peformant, accessible, and SEO friendly than a site built with these other tools. 
+    answer: Yes! These services are cool because you can modify the layouts and design by yourself without knowing how to write code. But, this work can still take a lot of time and effort. And, unfortunately, you will be paying a monthly fee for as long as your site is around, and you may have to use templates and stock features that aren't exactly what you want. In most cases, your Hush Spring site will be more peformant, accessible, and SEO friendly than a site built with these other tools. 
   - question: You say that my site will be fast, accessible, and SEO friendly. How will I know that it actually is?
-    answer: We can show you how to use a tool called Lighthouse, from Google. It will you show you scores for web performance, accessibility, and SEO. They will be very high.
+    answer: We will show you how to use a tool called Lighthouse, from Google. It will you show you scores for web performance, accessibility, and SEO. They will be very high.
   - question: Once my site is built, what if I want to change the design or add a new feature?
-    answer: You will have a lot of control over your site content, and you can update it whenever you want. Your site will also come with features that you might not want now, but can turn on later. That said, if you want a design tweak, a full redesign, or some brand new feature, get in touch, and we we'll provide an affordable quote. 
-  - question: You are just charging me a one time fee. Does that mean my site is free forever after that?
+    answer: You will have a lot of control over your site content, and you can update it whenever you want. Your site will also come with features that you might not want now, but can turn on later. That said, if you want a design tweak, a full redesign, or a brand new feature, get in touch, and we we'll provide an affordable quote. 
+  - question: You are just charging me a one-time fee. Does that mean my site is free forever after that?
     answer: Most likely. We build sites using tools and techniques that allow us to use free or extremely cheap tools for hosting. You will be locked in at no additional cost for two years. After two years, unless there has been a significant rise in the cost of the tools we use, there will continue to be no additional cost.
+  - question: What if I wanted to use a different service to host my website once it's built?
+    answer: Once we build your site, it's yours. We'll give you all the code for your site, so you can do whatever you want with it. 
 
 ---
 
 <h1 class="cmp-h1">Services</h1>
 <p class="cmp-p">Hush Spring builds websites for writers and artists.</p>
-<p class="cmp-p">Prices include design, development, and hosting of your site. You will also need to buy a domain name, which usually costs $12-15 a year.</p>
+<p class="cmp-p">Prices include design, development, and hosting. You will also need to buy a domain name, which usually costs $12-15 a year.</p>
 <p> If you don't see a service listed below that fits your needs, <a class="text-underline text-accent1" href="/contact">get in touch</a> and let us know what you have in mind.</p>
 {% for service in services %}
   <section class="pt-8">
-    <h2 class="cmp-h2">{{service.title}} | <span>{{service.price}}</span> | <a class="text-accent1" href="/contact?purchase={{service.title}}">Buy</a></h2>
+    <h2 class="cmp-h2">{{service.title}} | <span>{{service.price}}</span>{% if service.title != 'Artist Site'%} | <a class="text-accent1" href="/contact?purchase={{service.title}}">Buy</a>{% endif %}</h2>
     <p>{{service.description}}</p>
     <ul class="list-disc">
       <p class="pt-4">Includes:</p>
