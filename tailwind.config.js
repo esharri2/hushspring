@@ -6,6 +6,7 @@ const pale = "#f0f0ee";
 const clay = "#bb764b";
 const wine = "#a34430";
 const saffron = "#cca74e";
+const darksaffron = "#9e862e";
 const tumeric = "#e3c090";
 const coal = "#2a2825";
 const cloud = "#848880";
@@ -21,6 +22,7 @@ module.exports = {
       dark: coal,
       accent1: clay,
       accent2: saffron,
+      accent2dark: darksaffron,
       accent3: wine,
       accent4: mole,
       accent5: sand,
